@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Department</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .dashboard {
+            width: 400px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .buttons {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <h1>Add New Department</h1>
+        <form action="addDepartment.php" method="POST">
+            <div class="form-group">
+                <label for="department_id">Department ID:</label>
+                <input type="text" id="department_id" name="ddid" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Department Name:</label>
+                <input type="text" id="name" name "dname" required>
+            </div>
+            <div class="form-group">
+                <label for="budget">Department Budget:</label>
+                <input type="number" id="budget" name="dbudget" required>
+            </div>
+            <div class="form-group">
+                <label for="estb_date">Date of Establishment:</label>
+                <input type="date" id="estb_date" name="ddoe" required>
+            </div>
+            <div class="buttons">
+                <button type="submit">Add Department</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
